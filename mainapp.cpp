@@ -8,13 +8,13 @@
 #include <fstream>
 #include <iostream>
 
-std::string hwmonPath = "/sys/bus/iio/devices/iio:device0/in_voltage";
-
 namespace iio_hwmon
 {
 
 boost::asio::io_service io;
 std::shared_ptr<sdbusplus::asio::connection> conn;
+
+std::string hwmonPath = "/sys/bus/iio/devices/iio:device0/in_voltage";
 
 struct iioEntity
 {
