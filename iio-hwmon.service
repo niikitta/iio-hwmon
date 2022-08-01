@@ -1,0 +1,10 @@
+[Unit]
+Description=Set iio-hwmon on dbus
+
+[Service]
+ExecStart=/usr/bin/iio-hwmon
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
